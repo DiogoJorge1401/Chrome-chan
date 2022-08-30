@@ -20,10 +20,10 @@
 }
 
 body {
-    background-position: center top;
+    background-position: center top !important;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-attachment: fixed !important;
+    background-size: cover !important;
 }
 
 .N0LMJe.ellipsisize {

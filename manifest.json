@@ -4,11 +4,20 @@
   "version": "1.0",
   "manifest_version": 3,
   "author": "Diego Horvatti",
-  "content_scripts": [{
-    "matches": ["https://www.google.com/*", "https://www.google.com.br/*"],
-    "css": ["./theme/styles.css"],
-    "js": ["./theme/index.js"]
-  }],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*",
+        "https://www.google.com.br/*"
+      ],
+      "css": [
+        "./theme/styles.css"
+      ],
+      "js": [
+        "./theme/index.js"
+      ]
+    }
+  ],
   "permissions": [
     "scripting",
     "activeTab"
@@ -16,14 +25,19 @@
   "description": "Uma versão beta + confortavel do chrome",
   "action": {
     "default_locale": "pt-br",
-    "default_icon": "./logo.png",
+    "default_icon": {
+      "16": "./logo.png",
+      "32": "./logo.png",
+      "48": "./logo.png",
+      "128": "./logo.png"
+    },
     "default_title": "google-chan",
     "default_popup": "./popup.html"
   },
   "icons": {
-    "16":  "./logo.png",
-    "32":  "./logo.png",
-    "48":  "./logo.png",
+    "16": "./logo.png",
+    "32": "./logo.png",
+    "48": "./logo.png",
     "128": "./logo.png"
   }
 }

@@ -20,7 +20,11 @@
 }
 
 .N0LMJe.ellipsisize {
-    visibility: hidden;
+    visibility: hidden !important;
+}
+
+.containerMaxWidth {
+    max-width: 100% !important;
 }
 
 .featuredColor {

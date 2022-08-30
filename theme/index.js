@@ -3,15 +3,21 @@ const GITHUB_URL = 'https://raw.githubusercontent.com/DIEGOHORVATTI/wallpaper/ma
 const style = document.body.style;
 
 const mainColorsSelectors = {
-  toolButton: '#hdtb-tls',
-  allNavButton: '.hdtb-mitem',
+  allToolButton: '#hdtb-tls',
+  imagesToolButton: '.PNyWAd.ZXJQ7c',
+  allNavButtons: '.hdtb-mitem',
+  imagesNavButtons: '.NZmxZe',
   navLinks: '.hdtb-mitem a',
   moreButton: '.GOE98c',
-  footballTitle: '.ofy7ae'
+  footballTitle: '.ofy7ae',
 }
 
 const backgroundMain = {
   searchBar: '.RNNXgb'
+}
+
+const maxWidthOneHundred = {
+  imageContainer: '.islrc'
 }
 
 Object
@@ -21,6 +27,7 @@ Object
     element.forEach(eachEl => eachEl.classList.add('featuredColor'))
   }
   )
+
 Object
   .entries(backgroundMain)
   .forEach(el => {
@@ -28,6 +35,16 @@ Object
     element.forEach(eachEl => eachEl.classList.add('background'))
   }
   )
+
+Object
+  .entries(maxWidthOneHundred)
+  .forEach(el => {
+    const element = document.querySelectorAll(el[1])
+    element.forEach(eachEl => eachEl.classList.add('containerMaxWidth'))
+  }
+  )
+
+
 
 function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;

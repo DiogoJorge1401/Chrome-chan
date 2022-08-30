@@ -1,0 +1,182 @@
+:root {
+  --background: white;
+  --primary: #ff1ead;
+  --secondary: #1effc3;
+  --card-size: 230px;
+  --dark: rgba(0, 0, 0, 0.7);
+  --circle: 0.4rem;
+  --cor-destaque: #f1117d;
+}
+
+*,
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-variant: contextual !important;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box
+}
+
+html.background,
+body.background {
+  background: transparent !important;
+}
+
+.card {
+  padding-left: 0.5rem;
+  width: calc(var(--card-size) * 1.586);
+  border-radius: 0.75rem;
+  box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  background: rgb(0, 0, 0);
+  transform: scale(1.06);
+  display: grid;
+  grid-template-columns: 40% auto;
+  color: white;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: url('https://st3.depositphotos.com/32100976/34458/i/600/depositphotos_344582664-stock-photo-anime-wallpapers-hd-black-and.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+
+.card-details {
+  background-color: var(--dark) !important;
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem !important;
+}
+
+.name a {
+  font-size: 1.25rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.occupation a {
+  font-size: 0.7rem;
+  color: var(--cor-destaque);
+}
+
+.card-about {
+  margin-top: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.item .value a {
+  font-size: 1rem;
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+.item .label a {
+  font-size: 0.9rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.item .label a,
+.item .value a {
+  text-decoration: none;
+}
+
+.item .label a:hover,
+.item .value a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.75rem;
+}
+
+/* imput de play */
+.form-check {
+  position: relative;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.form-check-toggle {
+  position: relative;
+  padding-left: 0;
+  line-height: 30px;
+}
+
+.form-check-toggle input {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.form-check-toggle input+span {
+  cursor: pointer;
+  user-select: none;
+  height: 30px;
+  margin-left: 70px;
+  display: block;
+}
+
+.form-check-toggle input+span:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 25px;
+  width: 60px;
+  background: rgb(122, 122, 122);
+  border: solid 1px #969696;
+  transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+.form-check-toggle input+span:after {
+  width: 25px;
+  height: 25px;
+  margin-top: 1px;
+  margin-left: 1px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  background: #fff;
+  transition: margin-left 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  font-weight: bold;
+  content: '';
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-check-toggle input:checked+span:after {
+  content: '';
+  margin-left: 35px;
+  box-shadow: none;
+}
+
+.form-check-toggle input:checked+span:before {
+  background-color: var(--cor-destaque);
+  border-color: var(--primary);
+  transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}

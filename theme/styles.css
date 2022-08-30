@@ -1,0 +1,55 @@
+:root {
+    --dark: rgba(0, 0, 0, 0.6);
+    --circle: 0.4rem;
+    --cor-destaque: #f1117d;
+    --cor-destaque-focus: #8f0045;
+    --blue: #0ff;
+}
+
+* {
+    transition: all .3s ease;
+
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-variant: contextual !important;
+
+    box-shadow: transparent !important;
+    border: transparent !important;
+    background-color: transparent !important;
+
+    scrollbar-width: thin !important;
+}
+
+.N0LMJe.ellipsisize {
+    visibility: hidden;
+}
+
+.featuredColor {
+    color: var(--cor-destaque) !important;
+}
+
+.background {
+    background: #202124a8 !important;
+}
+
+a:focus,
+a:focus-visible,
+a:focus-visible,
+a:visited {
+    color: var(--cor-destaque-focus) !important;
+}
+
+/*Barra de rolagem*/
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 7px !important;
+}
+
+*::-webkit-scrollbar-track {
+    background: #000 !important;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--cor-destaque) !important;
+    border-radius: 100px !important;
+    border: 0px !important;
+}

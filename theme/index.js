@@ -5,8 +5,10 @@ const style = document.body.style;
 const mainColorsSelectors = {
   allToolButton: '#hdtb-tls',
   imagesToolButton: '.PNyWAd.ZXJQ7c',
+
   allNavButtons: '.hdtb-mitem',
   imagesNavButtons: '.NZmxZe',
+
   navLinks: '.hdtb-mitem a',
   moreButton: '.GOE98c',
   footballTitle: '.ofy7ae',
@@ -54,14 +56,8 @@ function image() {
   style.backgroundImage = `
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)), url(${GITHUB_URL}${getRandomIntInclusive(1, 421)}.png)
   `;
-  style.backgroundRepeat = "no-repeat";
-  style.backgroundPosition = "top";
-  style.backgroundAttachment = "fixed";
-  style.backgroundSize = "cover";
 }
 
 image();
 
-setInterval(() => {
-  image();
-}, 30000);
+setInterval(image, 30000);

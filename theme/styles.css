@@ -19,6 +19,13 @@
     scrollbar-width: thin !important;
 }
 
+body {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .N0LMJe.ellipsisize {
     visibility: hidden !important;
 }
